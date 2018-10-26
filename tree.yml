@@ -1,0 +1,9 @@
+---
+- name: install tree
+  hosts: all
+  tasks:
+    - name: Install on centos
+      when: ansible_os_family == "Redhat"
+      package:
+        name: tree
+        state: present
